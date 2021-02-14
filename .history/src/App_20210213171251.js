@@ -17,14 +17,11 @@ import {
 
 export default function BasicExample() {
   return (
-    
     <Router>
       <div>
         <ul>
           <li>
-          
             <Link to="/">Home</Link>
-            
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -70,10 +67,6 @@ function Home() {
 
         Welcome to coding mentors. Find a coding mentor or become one.
       </p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-  Button
-</button>
-      
     </div>
   );
 }
@@ -82,7 +75,6 @@ function About() {
   return (
     <div>
       <h2>About</h2>
-      <p>Coding mentors helps you to learn coding faster. Find best mentors, subscribe for monthly mentorship or get on one-time classes.</p>
     </div>
   );
 }

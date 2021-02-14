@@ -22,9 +22,11 @@ export default function BasicExample() {
       <div>
         <ul>
           <li>
-          
+          <div className="bg-primary">test</div>
             <Link to="/">Home</Link>
-            
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Button
+</button>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -82,7 +84,6 @@ function About() {
   return (
     <div>
       <h2>About</h2>
-      <p>Coding mentors helps you to learn coding faster. Find best mentors, subscribe for monthly mentorship or get on one-time classes.</p>
     </div>
   );
 }
