@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import logo from './img/cm-horizontal.svg';
 import logosq from './img/cm-square.svg';
-
+import { Helmet } from 'react-helmet'
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -190,9 +190,11 @@ function Home() {
       <h2>Home hello</h2>
       <p>
 
-        Welcome to coding mentors. Find a coding mentor or become one.
+        Welcome to coding mentors. Find a coding mentor or become one. Let's go.
       </p>
-      
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Button
+</button>
       
     </div>
   );

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="415" height="77" viewBox="0 0 415 77">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 37.5px;
+        fill: #27272a;
+      }
+
+      .cls-1, .cls-2 {
+        text-anchor: middle;
+        font-family: "Arial Rounded MT Bold";
+      }
+
+      .cls-2 {
+        font-size: 45.833px;
+        fill: #4f46e6;
+      }
+    </style>
+  </defs>
+  <text id="coding_mentors" data-name="coding mentors" class="cls-1" x="255.336" y="52.094"><tspan x="255.336">coding mentors</tspan></text>
+  <text id="_" data-name="&lt; / &gt;" class="cls-2" x="55.516" y="57.813"><tspan x="55.516">&lt; / &gt;</tspan></text>
+</svg>

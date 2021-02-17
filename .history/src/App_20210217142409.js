@@ -5,9 +5,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import logo from './img/cm-horizontal.svg';
-import logosq from './img/cm-square.svg';
-
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -53,8 +50,8 @@ export default function BasicExample() {
           </button>
         </div>
         <div className="flex-shrink-0 flex items-center">
-          <img className="block lg:hidden h-8 w-auto" src={logosq} alt="Coding Mentors" />
-          <img className="hidden lg:block h-8 w-auto" src={logo} alt="Coding Mentors" />
+          <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Coding Mentors" />
+          <img className="hidden lg:block h-8 w-auto" src="img/cm.svg" alt="Coding Mentors" />
         </div>
         <div className="hidden md:ml-6 md:flex md:space-x-8">
           {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
@@ -190,9 +187,11 @@ function Home() {
       <h2>Home hello</h2>
       <p>
 
-        Welcome to coding mentors. Find a coding mentor or become one.
+        Welcome to coding mentors. Find a coding mentor or become one. Let's go.
       </p>
-      
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Button
+</button>
       
     </div>
   );
