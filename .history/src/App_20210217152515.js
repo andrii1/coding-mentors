@@ -53,8 +53,7 @@ export default function BasicExample() {
           <div className="flex items-center justify-between w-full md:w-auto">
             <a href="#">
               <span className="sr-only">Coding Mentors</span>
-              <img className="h-8 w-auto sm:h-10" src={logo} alt="" />
-              
+              <img className="h-8 w-auto sm:h-10" src={logosq} alt="" />
             </a>
             <div className="-mr-2 flex items-center md:hidden">
               <button type="button" className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" id="main-menu" aria-haspopup="true">
@@ -100,7 +99,7 @@ export default function BasicExample() {
       <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
         <div className="px-5 pt-4 flex items-center justify-between">
           <div>
-            <img className="h-8 w-auto" src={logosq} alt="" />
+            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
           </div>
           <div className="-mr-2">
             <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -135,7 +134,7 @@ export default function BasicExample() {
       <div className="text-center">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block xl:inline">Learn to code</span>
-          <span className="block text-indigo-600 xl:inline"> faster</span>
+          <span className="block text-indigo-600 xl:inline">faster</span>
         </h1>
         <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
           Find a coding mentor or become one.
