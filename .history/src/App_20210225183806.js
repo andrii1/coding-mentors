@@ -103,11 +103,11 @@ export default function BasicExample() {
           <div className="py-6 px-5">
             <div className="grid grid-cols-2 gap-4">
               <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-              <Link to="/about">About</Link>
+                About
               </a>
 
               <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-              <Link to="/mentors">Mentors</Link>
+                Mentors
               </a>
 
               <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -152,10 +152,10 @@ export default function BasicExample() {
             <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                 <a href="#" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
-                  Find mentors
+                  Get started
                 </a>
                 <a href="#" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
-                  Become a mentor
+                  Live demo
                 </a>
               </div>
             </div>
