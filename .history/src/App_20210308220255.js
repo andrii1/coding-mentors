@@ -154,9 +154,9 @@ export default function BasicExample() {
 
   <footer className="bg-gray-50" aria-labelledby="footerHeading">
     <h2 id="footerHeading" className="sr-only">Footer</h2>
-    <div className="max-w-7xl mx-auto pt-16 pb-8 px-0 sm:px-6 lg:pt-24 lg:px-8">
+    <div className="max-w-7xl mx-auto pt-16 pb-8 px-0 sm:px-6">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8 lg:grid lg:grid-cols-3 lg:gap-8">
-        <div className="grid grid-cols-2 gap-8 xl:col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-2 gap-8 xl:col-span-2">
           
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div>
@@ -182,7 +182,7 @@ export default function BasicExample() {
             
           </div>
         </div>
-        <div className="mt-12 xl:mt-0 lg:mt-0">
+        <div className="mt-12 xl:mt-0">
           <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
             Subscribe to our newsletter
           </h3>
