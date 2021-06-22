@@ -1,5 +1,5 @@
 import photo1 from '../img/cod-ment.jpg';
-import logo from '../img/cm-horizontal.svg';
+import logo from './img/cm-horizontal.svg';
 import { CheckCircleIcon, ChevronRightIcon, MailIcon } from '@heroicons/react/solid'
 
 const applications = [
@@ -7,7 +7,8 @@ const applications = [
     applicant: {
       name: 'Andrii Gorokhovskyi',
       email: 'hello@onlinehikes.com',
-      imageUrl: "{photo1}",
+      imageUrl:
+        '{logo}',
     },
     date: '2020-01-07',
     dateFull: 'January 7, 2020',

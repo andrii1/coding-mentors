@@ -318,7 +318,6 @@ export default function BasicExample() {
                   </ul>
                 </div>
               </div>
-{/*
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
@@ -334,7 +333,6 @@ export default function BasicExample() {
                 </div>
                
               </div>
-                    */}
             </div>
             <div className="mt-12 xl:mt-0">
               <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
