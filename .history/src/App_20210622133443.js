@@ -11,7 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About'; 
 import Mentors from './pages/Mentors'; 
 import Become from './pages/Become'; 
-import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
 
 
 
