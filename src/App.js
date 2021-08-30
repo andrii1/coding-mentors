@@ -299,7 +299,7 @@ export default function BasicExample() {
                     {footerNavigation.solutions.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
+                        <Link to={item.href}>{item.name}</Link>
                         </a>
                       </li>
                     ))}
@@ -311,7 +311,7 @@ export default function BasicExample() {
                     {footerNavigation.company.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
+                        <Link to={item.href}>{item.name}</Link>
                         </a>
                       </li>
                     ))}

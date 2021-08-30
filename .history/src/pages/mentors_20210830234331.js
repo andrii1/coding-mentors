@@ -7,8 +7,7 @@ const applications = [
     applicant: {
       name: 'Andrii Gorokhovskyi',
       email: 'hello@onlinehikes.com',
-      imageUrl:
-        '{logo}',
+      imageUrl: './img/cod-ment.jpg',
     },
     date: '2020-01-07',
     dateFull: 'January 7, 2020',

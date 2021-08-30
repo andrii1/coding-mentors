@@ -104,7 +104,7 @@ const metrics = [
 const footerNavigation = {
   solutions: [
     { name: 'Find mentors', href: 'mentors' },
-    { name: 'Become a mentor', href: 'become' },
+    { name: 'Become a mentor', href: 'become-a-mentor' },
    
   ],
   support: [
@@ -117,7 +117,7 @@ const footerNavigation = {
     { name: 'About', href: 'about' }
   ],
   legal: [
-    { name: 'Claim', href: '#' },
+    
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
   ],
@@ -299,7 +299,7 @@ export default function BasicExample() {
                     {footerNavigation.solutions.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
+                        <Link to={item.href}>{item.name}</Link>
                         </a>
                       </li>
                     ))}
@@ -311,13 +311,14 @@ export default function BasicExample() {
                     {footerNavigation.company.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
+                        <Link to={item.href}>{item.name}</Link>
                         </a>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
+{/*
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
@@ -333,6 +334,7 @@ export default function BasicExample() {
                 </div>
                
               </div>
+                    */}
             </div>
             <div className="mt-12 xl:mt-0">
               <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
@@ -375,7 +377,7 @@ export default function BasicExample() {
               ))}
             </div>
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2020 Workflow, Inc. All rights reserved.
+              &copy; 2021 Coding Mentors. All rights reserved.
             </p>
           </div>
         </div>

@@ -7,8 +7,7 @@ const applications = [
     applicant: {
       name: 'Andrii Gorokhovskyi',
       email: 'hello@onlinehikes.com',
-      imageUrl:
-        '{logo}',
+      imageUrl: 'https://www.coding-mentors.com/img/cod-ment.jpg',
     },
     date: '2020-01-07',
     dateFull: 'January 7, 2020',
@@ -51,7 +50,7 @@ function Mentors() {
               <div className="flex items-center px-4 py-4 sm:px-6">
                 <div className="min-w-0 flex-1 flex items-center">
                   <div className="flex-shrink-0">
-                    <img className="h-12 w-12 rounded-full" src={image1} alt="" />
+                    <img className="h-12 w-12 rounded-full" src={application.applicant.imageUrl} alt="" />
                   </div>
                   <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
                     <div>
