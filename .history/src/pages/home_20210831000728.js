@@ -1,4 +1,5 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 function Home() {
     return (
       
@@ -22,10 +23,10 @@ function Home() {
             </p>
             <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                <a href="#findmentors" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
+                <a href="#findmentor" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
                   Find mentors
                 </a>
-                <a href="#" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
+                <a href="#bementor" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
                   Become a mentor
                 </a>
               </div>
@@ -47,7 +48,27 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-         
+            <Formik
+       initialValues={{ email: '', password: '' }}
+       validate={values => {
+         const errors = {};
+         if (!values.email) {
+           errors.email = 'Required';
+         } else if (
+           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+         ) {
+           errors.email = 'Invalid email address';
+         }
+         return errors;
+       }}
+       onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+     >
+       {({ isSubmitting }) => (
             <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full_name" className="sr-only">
@@ -98,6 +119,8 @@ function Home() {
                 </button>
               </div>
             </form>
+              )}
+              </Formik>
         
             </div>
           </div>

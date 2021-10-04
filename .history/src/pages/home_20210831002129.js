@@ -1,4 +1,5 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 function Home() {
     return (
       
@@ -47,8 +48,37 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-         
-            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+            <Formik
+       initialValues={{ email: '', password: '' }}
+       validate={values => {
+         const errors = {};
+         if (!values.email) {
+           errors.email = 'Required';
+         } else if (
+           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+         ) {
+           errors.email = 'Invalid email address';
+         }
+         return errors;
+       }}
+       onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+     >
+       {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
+         /* and other goodies */
+       }) => (
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full_name" className="sr-only">
                   Full name
@@ -73,7 +103,11 @@ function Home() {
                   autoComplete="email"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="Email"
+                  onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.email}
                 />
+                {errors.email && touched.email && errors.email}
               </div>
               
               <div>
@@ -93,11 +127,14 @@ function Home() {
                 <button
                   type="submit"
                   className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  disabled={isSubmitting}
                 >
                   Submit
                 </button>
               </div>
             </form>
+              )}
+              </Formik>
         
             </div>
           </div>
