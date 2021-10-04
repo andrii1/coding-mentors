@@ -1,7 +1,6 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 /*import { Formik, Form, Field, ErrorMessage } from 'formik';*/
 import FormMentor from "../Form-mentor";
-import FormFindMentor from "../Form-find-mentor";
 function Home() {
     return (
 
@@ -50,7 +49,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-                  <FormFindMentor />
+
 
             </div>
           </div>
@@ -62,7 +61,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-              <FormMentor />
+              <Form />
 
             </div>
           </div>

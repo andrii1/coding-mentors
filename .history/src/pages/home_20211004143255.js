@@ -50,7 +50,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-                  <FormFindMentor />
+
 
             </div>
           </div>
