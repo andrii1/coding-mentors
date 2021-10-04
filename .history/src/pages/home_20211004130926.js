@@ -1,8 +1,9 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+/*import { Formik, Form, Field, ErrorMessage } from 'formik';*/
+import Form from "./../Form";
 function Home() {
     return (
-      
+
         <main>
     {/* Hero section */}
     <div className="relative">
@@ -48,92 +49,8 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
-            <Formik
-       initialValues={{ email: '', password: '' }}
-       validate={values => {
-         const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
-         } else if (
-           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-         ) {
-           errors.email = 'Invalid email address';
-         }
-         return errors;
-       }}
-       onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
-       }}
-     >
-       {({
-         values,
-         errors,
-         touched,
-         handleChange,
-         handleBlur,
-         handleSubmit,
-         isSubmitting,
-         /* and other goodies */
-       }) => (
-            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
-              <div>
-                <label htmlFor="full_name" className="sr-only">
-                  Full name
-                </label>
-                <input
-                  type="text"
-                  name="full_name"
-                  id="full_name"
-                  autoComplete="name"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="Full name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="Email"
-                  onChange={handleChange}
-             onBlur={handleBlur}
-             value={values.email}
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                  placeholder="Message"
-                  defaultValue={''}
-                />
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-              )}
-              </Formik>
-        
+
+
             </div>
           </div>
           <div className="mt-12 sm:mt-16 md:mt-0">
@@ -144,6 +61,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
+              <Form />
             <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full_name" className="sr-only">
@@ -171,7 +89,7 @@ function Home() {
                   placeholder="Email"
                 />
               </div>
-             
+
               <div>
                 <label htmlFor="message" className="sr-only">
                   Message
@@ -203,9 +121,9 @@ function Home() {
 
 
   </main>
-        
-        
-     
+
+
+
     );
   }
 

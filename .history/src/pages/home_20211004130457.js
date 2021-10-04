@@ -2,7 +2,7 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 function Home() {
     return (
-      
+
         <main>
     {/* Hero section */}
     <div className="relative">
@@ -90,6 +90,9 @@ function Home() {
                   autoComplete="name"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="Full name"
+                  onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.full_name}
                 />
               </div>
               <div>
@@ -109,7 +112,7 @@ function Home() {
                 />
                 {errors.email && touched.email && errors.email}
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="sr-only">
                   Message
@@ -121,6 +124,9 @@ function Home() {
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                   placeholder="Message"
                   defaultValue={''}
+                  onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.message}
                 />
               </div>
               <div>
@@ -135,7 +141,7 @@ function Home() {
             </form>
               )}
               </Formik>
-        
+
             </div>
           </div>
           <div className="mt-12 sm:mt-16 md:mt-0">
@@ -146,6 +152,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-9">
+              <Form />
             <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full_name" className="sr-only">
@@ -173,7 +180,7 @@ function Home() {
                   placeholder="Email"
                 />
               </div>
-             
+
               <div>
                 <label htmlFor="message" className="sr-only">
                   Message
@@ -205,9 +212,9 @@ function Home() {
 
 
   </main>
-        
-        
-     
+
+
+
     );
   }
 
