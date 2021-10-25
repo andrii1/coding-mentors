@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 import logo from './img/cm-horizontal.svg';
 import logosq from './img/cm-square.svg';
-import Home from './pages/Home'; 
-import About from './pages/About'; 
-import Mentors from './pages/Mentors'; 
-import Become from './pages/Become'; 
+import Home from './pages/Home';
+import About from './pages/About';
+import Mentors from './pages/Mentors';
+import Become from './pages/Become';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -106,7 +106,7 @@ const footerNavigation = {
   solutions: [
     { name: 'Find mentors', href: 'mentors' },
     { name: 'Become a mentor', href: 'become-a-mentor' },
-   
+
   ],
   support: [
     { name: 'Pricing', href: '#' },
@@ -118,18 +118,25 @@ const footerNavigation = {
     { name: 'About', href: 'about' }
   ],
   legal: [
-    
+
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
   ],
   social: [
-   
+
   ],
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-W5T6RP2'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 
 
@@ -145,7 +152,7 @@ function classNames(...classes) {
 
 export default function BasicExample() {
   return (
-    
+
     <Router>
       <Switch>
       <div>
@@ -154,7 +161,7 @@ export default function BasicExample() {
 
 
 
-    
+
 <div className="bg-white">
 <header>
         <Popover className="relative bg-white">
@@ -178,7 +185,7 @@ export default function BasicExample() {
                   </Popover.Button>
                 </div>
                 <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                 
+
 
                   <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
                   <Link to="/about">About</Link>
@@ -235,7 +242,7 @@ export default function BasicExample() {
                           </Popover.Button>
                         </div>
                       </div>
-                      
+
                     </div>
                     <div className="py-6 px-5">
                       <div className="grid grid-cols-2 gap-4">
@@ -257,7 +264,7 @@ export default function BasicExample() {
                           Sign up
                         </a>
                         <p className="mt-6 text-center text-base font-medium text-gray-500">
-                          Existing customer? 
+                          Existing customer?
                           <a href="#" className="text-gray-900">
                             Sign in
                           </a>
@@ -272,7 +279,7 @@ export default function BasicExample() {
         </Popover>
       </header>
 
-  
+
           <Route exact path="/">
             <Home />
           </Route>
@@ -285,7 +292,7 @@ export default function BasicExample() {
           <Route path="/become-a-mentor">
             <Become />
           </Route>
-          
+
           <footer className="bg-gray-50" aria-labelledby="footerHeading">
         <h2 id="footerHeading" className="sr-only">
           Footer
@@ -333,7 +340,7 @@ export default function BasicExample() {
                     ))}
                   </ul>
                 </div>
-               
+
               </div>
                     */}
             </div>
@@ -400,7 +407,7 @@ export default function BasicExample() {
 
 
 
-       
+
 
         {/*
           A <Switch> looks through all its children <Route>
@@ -409,13 +416,11 @@ export default function BasicExample() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        
-          
-         
+
+
+
         </Switch>
-      
+
     </Router>
   );
 }
-
-
