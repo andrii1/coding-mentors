@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -131,6 +130,8 @@ const footerNavigation = {
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+
 
 
 
@@ -418,8 +419,6 @@ function App() {
         </Switch>
 
     </Router>
-      }
-    </IdentityContextProvider>
   );
 }
 export default App;

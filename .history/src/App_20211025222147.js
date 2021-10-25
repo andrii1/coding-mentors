@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -134,6 +133,8 @@ function classNames(...classes) {
 
 
 
+
+
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
 //
@@ -145,10 +146,8 @@ function classNames(...classes) {
 
 
 function App() {
-  const url = 'https://www.coding-mentors.com';
   return (
-    <IdentityContextProvider url={url}>
-      {
+
     <Router>
       <Switch>
       <div>
@@ -418,8 +417,6 @@ function App() {
         </Switch>
 
     </Router>
-      }
-    </IdentityContextProvider>
   );
 }
 export default App;

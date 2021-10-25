@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -132,6 +131,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+import { IdentityContextProvider } from 'react-netlify-identity';
 
 
 // This site has 3 pages, all of which are rendered
