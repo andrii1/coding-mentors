@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  useIdentityContext,
-  IdentityContextProvider,
-  // Settings,
-} from 'react-netlify-identity';
-import useLoading from './useLoading';
+import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +12,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Mentors from './pages/Mentors';
 import Become from './pages/Become';
-import Login from './pages/Login';
+import Login from './pages/Signup';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -151,9 +146,10 @@ function classNames(...classes) {
 
 
 function App() {
-  const url = 'https://www.coding-mentors.com/';
+  const url = 'https://www.coding-mentors.com';
   return (
     <IdentityContextProvider url={url}>
+      {
     <Router>
       <Switch>
       <div>
@@ -427,7 +423,7 @@ function App() {
         </Switch>
 
     </Router>
-
+      }
     </IdentityContextProvider>
   );
 }

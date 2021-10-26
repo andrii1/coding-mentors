@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  useIdentityContext,
-  IdentityContextProvider,
-  // Settings,
-} from 'react-netlify-identity';
-import useLoading from './useLoading';
+import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +12,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Mentors from './pages/Mentors';
 import Become from './pages/Become';
-import Login from './pages/Login';
+import Login from './pages/Signup';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -151,9 +146,14 @@ function classNames(...classes) {
 
 
 function App() {
-  const url = 'https://www.coding-mentors.com/';
+  // TODO: SUPPLY A URL EITHER FROM ENVIRONMENT VARIABLES OR SOME OTHER STRATEGY
+  // e.g. 'https://unruffled-roentgen-04c3b8.netlify.com'
+  const [url, setUrl] = React.useState(window.location.origin)
+  const handler = e => setUrl(e.target.value)
+  const identity = useNetlifyIdentity(url)
+  console.log({ identity, url })
   return (
-    <IdentityContextProvider url={url}>
+    <IdentityContext.Provider value={identity}>
     <Router>
       <Switch>
       <div>
@@ -428,7 +428,7 @@ function App() {
 
     </Router>
 
-    </IdentityContextProvider>
+    </IdentityContext.Provider>
   );
 }
 export default App;

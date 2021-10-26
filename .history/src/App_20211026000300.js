@@ -17,7 +17,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Mentors from './pages/Mentors';
 import Become from './pages/Become';
-import Login from './pages/Login';
+import Login from './pages/Signup';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'

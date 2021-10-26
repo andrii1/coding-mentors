@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  useIdentityContext,
-  IdentityContextProvider,
-  // Settings,
-} from 'react-netlify-identity';
-import useLoading from './useLoading';
+import { IdentityContextProvider } from 'react-netlify-identity';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +12,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Mentors from './pages/Mentors';
 import Become from './pages/Become';
-import Login from './pages/Login';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -151,9 +145,10 @@ function classNames(...classes) {
 
 
 function App() {
-  const url = 'https://www.coding-mentors.com/';
+  const url = 'https://www.coding-mentors.com';
   return (
     <IdentityContextProvider url={url}>
+      {
     <Router>
       <Switch>
       <div>
@@ -262,7 +257,7 @@ function App() {
                           href="#"
                           className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
                         >
-                                    <Link to="/signup">Sign up</Link>
+                          Sign up
                         </a>
                         <p className="mt-6 text-center text-base font-medium text-gray-500">
                           Existing user?
@@ -293,10 +288,6 @@ function App() {
           <Route path="/become-a-mentor">
             <Become />
           </Route>
-          <Route path="/signup">
-            <Login />
-          </Route>
-
 
           <footer className="bg-gray-50" aria-labelledby="footerHeading">
         <h2 id="footerHeading" className="sr-only">
@@ -427,7 +418,7 @@ function App() {
         </Switch>
 
     </Router>
-
+      }
     </IdentityContextProvider>
   );
 }
